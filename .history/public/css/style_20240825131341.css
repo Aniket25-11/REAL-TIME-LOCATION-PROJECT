@@ -1,0 +1,55 @@
+/* Base styles for all devices */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+#permission-message {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Media query for tablets and mobile devices */
+@media (max-width: 768px) {
+  #map {
+    height: 80vh; /* Adjust height for smaller screens */
+  }
+
+  #permission-message {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px; /* Adjust padding */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  #map {
+    height: 70vh; /* Further adjust height for very small screens */
+  }
+
+  #permission-message {
+    font-size: 12px; /* Further adjust font size */
+    padding: 6px; /* Further adjust padding */
+    bottom: 5px; /* Adjust position */
+    left: 5px; /* Adjust position */
+  }
+}
